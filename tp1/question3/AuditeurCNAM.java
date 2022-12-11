@@ -47,7 +47,11 @@ public class AuditeurCNAM {
      *         homonymes...
      */
     public String login() {
-        
+        String nom=this.nom;
+        String prenom=this.prenom.substring(0,1);
+        if(nom.length()>6){System.out.println("nom invalide");}
+        String login= nom+ "_" + prenom;
+        login=login.toLowerCase();
         return "";// à compléter
     }
 
@@ -57,9 +61,6 @@ public class AuditeurCNAM {
      * @return son nom
      */
     public String nom() {
-        if(nom.length()>6){
-        System.out.println("nom invalide");
-        }
         return nom;// à compléter
     }
 
@@ -69,11 +70,7 @@ public class AuditeurCNAM {
      * @return son prénom
      */
     public String prenom() {
-        prenom1 = prenom[].split("",1);
-for (int i = 0; i < prenom.length-1; i++) {
-    prenom1[i] = prenom1[i]+"_";
-}
-        return prenom1;// à compléter
+        return prenom;// à compléter
     }
 
     /**
@@ -82,7 +79,7 @@ for (int i = 0; i < prenom.length-1; i++) {
      * @return son matricule
      */
     public String matricule() {
-        return null;// à compléter
+        return matricule;// à compléter
     }
 
     /**
