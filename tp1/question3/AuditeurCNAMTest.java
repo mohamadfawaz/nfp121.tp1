@@ -3,8 +3,8 @@ package question3;
 /**
  * Classe-test AuditeurCNAMTest.
  * 
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * @author (Mohamad Fawaz)
+ * @version (12/11/2022)
  * 
  *          Les classes-test sont documentées ici :
  *          http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
