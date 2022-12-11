@@ -20,7 +20,10 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
-
+     private Circle sun1;
+private int  xPosition;
+/** la terre est no fix si terrefix=true; la bleu solei vas dispararie**/
+private Boolean terrefix=false;
     /**
      * Constructor for objects of class Picture
      */
@@ -50,11 +53,36 @@ public class Picture {
         roof.makeVisible();
 
         sun = new Circle();
-        sun.changeColor("yellow");
+        sun.changeColor("blue");
         sun.moveHorizontal(180);
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        
+        sun1 = new Circle();
+        sun1.changeColor("yellow");
+        sun1.moveHorizontal(0);
+        sun1.moveVertical(-10);
+        sun1.changeSize(60);
+        sun1.makeVisible();
+        while(terrefix){
+      sun1.slowMoveHorizontal(180);}
+    }
+      public void slowMoveHorizontal(int distance) {
+        int delta;
+
+        if (distance < 0) {
+            delta = -1;
+            distance = -distance;
+        } else {
+            delta = 1;
+        }
+
+        for (int i = 0; i < distance; i++) {
+            xPosition += delta;
+            draw();
+        }
     }
 
     /**

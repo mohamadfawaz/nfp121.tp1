@@ -14,6 +14,8 @@ public class AuditeurCNAM {
     private String prenom;
     /** l'attribut matricule de chaque auditeur. */
     private String matricule;
+    private String prenom1;
+    private int i;
 
     /**
      * "Création", le constructeur d'un auditeur avec son nom, son prénom et son
@@ -45,6 +47,7 @@ public class AuditeurCNAM {
      *         homonymes...
      */
     public String login() {
+        
         return "";// à compléter
     }
 
@@ -54,7 +57,10 @@ public class AuditeurCNAM {
      * @return son nom
      */
     public String nom() {
-        return null;// à compléter
+        if(nom.length()>6){
+        System.out.println("nom invalide");
+        }
+        return nom;// à compléter
     }
 
     /**
@@ -63,7 +69,11 @@ public class AuditeurCNAM {
      * @return son prénom
      */
     public String prenom() {
-        return null;// à compléter
+        prenom1 = prenom[].split("",1);
+for (int i = 0; i < prenom.length-1; i++) {
+    prenom1[i] = prenom1[i]+"_";
+}
+        return prenom1;// à compléter
     }
 
     /**
